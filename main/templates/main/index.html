@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'main/base.html' %}
+  {% block content %}
+    <style type="text/css">
+
+    </style>
+    <div class="container">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+      <h1>Index View</h1>
+    </div>
+  {% endblock %}

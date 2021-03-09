@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+  {% block content %}
+    <style type="text/css">
+      .container{
+        width: 30%;
+      }
+    </style>
+    <div class="container">
+      <form action="" method="POST">
+        {{ form|crispy }}{% csrf_token %}
+        <br>
+        <input class="btn btn-primary" type="submit" value="Register">
+      </form><br>
+      <a href="/accounts/login">Already a User? Login Here</a>
+    </div>
+  {% endblock %}

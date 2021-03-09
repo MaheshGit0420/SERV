@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+  {% block content %}
+  <style type="text/css">
+    .container{
+      width: 30%;
+      padding-top: 20px;
+    }
+  </style>
+    <div class="container">
+      <h2>Event Registration Form</h2>
+      <form method="POST">
+        {{ form|crispy }}{% csrf_token %}<br>
+        <input class="btn btn-primary" type="submit" value="Register">
+      </form>
+    </div>
+  {% endblock %}
