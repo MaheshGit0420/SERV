@@ -1,21 +1,32 @@
 {% extends 'main/base.html' %}
+{% load cust_filters %}
   {% block content %}
   <style type="text/css">
     .container
     {
       padding-top: 30px;
     }
+    #card
+    {
+      padding-bottom:50px;
+    }
+    #eve-head
+    {
+      color:orange;
+      font-family:arial;
+    }
   </style>
     {% if events %}
     <div class="container">
+      <h2 align="center" id="eve-head"><b>UPCOMING EVENTS</b></h2><br>
   <div class="row align-items-start">
     {% for event in events %}
       <div class="col-lg-4 col-md-6 col-sm-12" id="card">
         <div class="card" style="width: 18rem;">
-  <img src="{{ event.picture.url }}" class="card-img-top" alt="...">
+  <img src="{{ event.picture.url }}" class="card-img-top" alt="..." style="height:250px;">
   <div class="card-body">
-    <h5 class="card-title">{{ event.title }}</h5>
-    <p class="card-text">{{ event.description }}</p>
+    <h5 class="card-title">{{ event.title|upper }}</h5>
+    <p class="card-text">{{ event.description|eve_desc_filter }}</p>
     <a href="#" class="btn btn-primary">Know more</a>
     <a href="/events/register/{{ event.id }}" class="btn btn-success">Register</a>
   </div>

@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from . models import Event,EventRegistration
 from . forms import EventRegistrationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 def list_events(request):
     events = Event.objects.all()
@@ -16,7 +17,8 @@ def register_view(request, eve_id):
         form = EventRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("/")
+            messages.success(request, f'{username} Successfully Registered for {event}!')
+            return redirect("list_events")
     else:
         form = EventRegistrationForm(initial={'username':username, 'event':event})
         return render(request, 'events/event_register.html', {'form':form})

@@ -2,7 +2,7 @@ from django.db import models
 
 class Event(models.Model):
     title = models.CharField(max_length=20, blank=True, null=True)
-    description = models.CharField(max_length=256, blank=True, null=True)
+    description = models.CharField(max_length=999, blank=True, null=True)
     address = models.CharField(max_length=256, null=True)
     datetime = models.DateTimeField(blank=True)
     picture = models.ImageField(blank=True, null=True)
