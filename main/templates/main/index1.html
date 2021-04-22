@@ -1,0 +1,89 @@
+{% extends 'main/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+  {% block content %}
+    <style type="text/css">
+      .container
+      {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3%;
+      }
+      
+     
+      .container .textbox
+      {
+        position: relative;
+        max-width: 600px;
+      }
+      .container .textbox h2
+      {
+        font-weight: 1000;
+        font-size: 2em;
+      }
+      .container .textbox h2 span
+      {
+        font-weight: 2000;
+        font-size: 2em;
+        color: rgb(108, 0, 141);
+      }
+      .container .imgbox .peopleimg
+      {
+        max-width: 850px;
+      }
+
+      .c2
+      {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15%;
+      }
+      .c2 .imgbox2 .im2
+      {
+        max-width: 850px;
+      }
+      .c2 .txtbox2
+      {
+        margin-left: 0%;
+      }
+      .c2 .txtbox2 h2
+      {
+        text-align: left;
+        font-weight: 1000;
+        font-size: 2em;
+      }
+      .c2 .txtbox2 h2 span
+      {
+        text-align: left;
+        font-size: 2em;
+        font-weight: 2000;
+        color: #102a9e;
+      }
+      
+
+
+      
+    </style>
+    <div class="container">
+      <div class="textbox">
+        <h2> Together, <br> Let's Make The World A <br> <span> Better Place </span> <br> To Live! </h2>
+      </div>
+      <div class="imgbox">  
+        <img src="{% static 'images/people.png' %}" class="peopleimg"/>
+      </div>
+    </div>
+    <div class="c2">
+      <div class="imgbox2">
+        <img src="{% static 'images/donate.png' %}" width=800px class="im2"/>
+      </div>
+      <div class="txtbox2">
+        <h2> Join us in the journey to revolutionise <br> <span>Philanthropy</span> </h2>
+      </div>
+    </div>
+  {% endblock %}

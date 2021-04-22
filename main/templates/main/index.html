@@ -1,10 +1,168 @@
+{% load static %}
 <!DOCTYPE html>
-{% extends 'main/base.html' %}
-  {% block content %}
-    <style type="text/css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serv</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="{% static 'css/mobilestyle.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <div class="logo">
+            <a href="#"><img src="{% static 'images/logo.png' %}"></a>
+          </div>
+          <ul>
+            <li><a href="#navbar">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact-form">Contact</a></li>
+            <li><a class="signup" href="#"> SignUp </a></li>
+          </ul>
+          
+        </div>
+      </nav>
+    </header>
 
-    </style>
-    <div class="container">
-      <h1>Index View</h1>
-    </div>
-  {% endblock %}
+
+    <section id="showcase">
+      <div class="showcase-content">
+        <div class="shtext">
+          <h1 class="text-primary">
+            Let's make the world
+            <br>
+            a better place to live
+          </h1>
+          <p class="lead">
+            SERV is a platform for social service, philanthropy.
+            <br>
+            100% Trustworthy and seemless user-experience.
+          </p>
+          <a class="btn" href="#">Get Started</a>
+        </div>
+        <div class="shimg">
+          <img src="{% static 'images/donateimg.png' %}">
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="bg-gray">
+      <div class="container">
+        <h2 class="l-heading text-primary">
+          Amazing features to convince you to use our application
+        </h2>
+        <div class="feature">
+          <i class="fas fa-lock fa-3x ft-circle"></i>
+          <h3 class="text-primary">Safe & Secure</h3>
+          <p>
+            Fully-Secured Payment
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fas fas fa-donate fa-3x ft-circle"></i>
+          <h3 class="text-primary">Donate</h3>
+          <p>
+            Donate for noble causes
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-handshake fa-3x ft-circle"></i>
+          <h3 class="text-primary">Trustworthy</h3>
+          <p>
+            No middlemen involved
+          </p>
+        </div>
+        <div class="feature">
+          <i class="far fa-object-group fa-3x ft-circle"></i>
+          <h3 class="text-primary">Minimal Design</h3>
+          <p>
+            Easy to use interface
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="clr"></div> -->
+
+    <section id="tech-1" class="bg-light py-3">
+      <div class="container">
+        <div class="tech-1-img">
+          <img src="{% static 'images/tech-1-img.png' %}" />
+        </div>
+        <div class="tech-1-content">
+          <h2 class="text-primary l-heading">
+            Discover powerful tool for your customers
+          </h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem officia, esse earum dignissimos, quis, dolore cumque
+            rem aut quasi repellat laborum molestiae ipsa. Repellat similique
+            doloremque aliquid hic, amet illo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="clr"></div>
+
+    <section id="tech-2" class="bg-gray py-3">
+      <div class="container">
+        <div class="tech-2-content">
+          <h2 class="text-primary l-heading">
+            Advance features give you full control
+          </h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem officia, esse earum dignissimos, quis, dolore cumque
+            rem aut quasi repellat laborum molestiae ipsa. Repellat similique
+            doloremque aliquid hic, amet illo.
+          </p>
+        </div>
+        <div class="tech-2-img">
+          <img src="{% static 'images/tech-2-img.png' %}" />
+        </div>
+      </div>
+    </section>
+
+    <div class="clr"></div>
+
+
+
+    <section id="contact-form" class="py-3">
+      <div class="container">
+        <h2 class="l-heading text-primary">
+          Feel free to connect with us.
+        </h2>
+        <form action="#">
+          <div class="form-group">
+            <input type="text" placeholder="Name" name="name" id="name" />
+          </div>
+
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email" id="email" />
+          </div>
+
+          <div class="form-group">
+            <textarea
+              placeholder="Enter Your Query"
+              name="message"
+              id="message"
+            ></textarea>
+          </div>
+
+          <button class="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer" class="bg-primary">
+      <p>SERV &copy; 2021. All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
