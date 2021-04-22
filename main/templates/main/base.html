@@ -4,11 +4,26 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serv</title>
   <!-- BootStrap link -->
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <!-- index cut links -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" media="screen and (max-width:768px)" href="{% static 'css/mobilestyle.css' %}" />
+
+
   <style type="text/css">
+    /* body
+    {
+      background-color: #E4EBF4;
+    } */
     #navbar
     {
       font-size:1.2rem;
@@ -18,11 +33,20 @@
       font-size:30px;
       font-family:arial;
     }
+    #navbarSupportedContent a
+    {
+      font-weight: 750;
+    }
+    #navbarSupportedContent a:hover
+    {
+      color: rgb(35, 123, 255);
+    }
+
   </style>
 </head>
-
+<!-- navbar-expand-lg navbar-light bg-light -->
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
     <div class="container-fluid">
       <a class="navbar-brand" href="/" id="brand"><img  src="{% static 'images/logo.png' %}" height="70px" width="150px"/></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,16 +58,13 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">AboutUs</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="/events/list_events">Events</a>
           </li>
         </ul>
         <ul class="navbar-nav navbar-right">
-          <li class="nav-item">
-            <a class="nav-link" href="#">LeaderBoard</a>
-          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#contact-form">Contact Us</a>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="/accounts/login">Login</a>
           </li>

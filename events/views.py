@@ -4,6 +4,7 @@ from . models import Event,EventRegistration
 from . forms import EventRegistrationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.contrib.auth.models import User
 
 def list_events(request):
     events = Event.objects.all()
@@ -22,3 +23,13 @@ def register_view(request, eve_id):
     else:
         form = EventRegistrationForm(initial={'username':username, 'event':event})
         return render(request, 'events/event_register.html', {'form':form})
+
+# def leaders_view(request):
+#         registrations = EventRegistration.objects.all()
+#         users = User.objects.all()
+#         redt = {}
+#         for user in users:
+#             EventRegistration.objects.get(username.__iexact==user.username)
+#             redt[user]+=redt.get(user, 10)
+#         print(redt['admin'])
+#         return render(request, 'events/leaders.html', {'redt':redt})
