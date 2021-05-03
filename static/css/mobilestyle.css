@@ -61,6 +61,10 @@
     padding-top: 70px;
     padding-bottom: 10px;
   }
+
+  #showcase .shimg img {
+    display: none;
+  }
   
   /* Features and FAQ Box */
   .feature,

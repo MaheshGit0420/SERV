@@ -9,7 +9,7 @@
     }
   </style>
     <div class="container">
-      <h2>Event Registration Form</h2>
+      <h2 style="color: #173399; margin-top: 25px; margin-bottom: 25px; text-align: center; font-weight: 850;">Event Registration Form</h2>
       <form method="POST">
         {{ form|crispy }}{% csrf_token %}<br>
         <input class="btn btn-primary" type="submit" value="Register">
